@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Store - Kikuchan Wellness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="index.html">Kikuchan<span>Wellness</span></a></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#topics">Themes</a></li>
+                    <li>
+                        <button class="cart-toggle" id="cart-toggle-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="store-header">
+            <div class="container">
+                <h1>Wellness Store</h1>
+                <p>科学的根拠に基づいて選ばれた、あなたの心と体を整えるためのアイテム。</p>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <div class="store-grid" id="product-grid">
+                    <!-- Products will be injected by script.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Overlay -->
+    <div class="backdrop" id="cart-backdrop"></div>
+    <div class="cart-overlay" id="cart-panel">
+        <div class="cart-header">
+            <h3>ショッピングカート</h3>
+            <button class="close-cart" id="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Cart items will be injected by script.js -->
+            <p style="text-align: center; color: var(--color-text-secondary); margin-top: 2rem;">カートは空です</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>合計</span>
+                <span id="cart-total-price">¥0</span>
+            </div>
+            <button class="checkout-btn">購入手続きへ進む</button>
+        </div>
+    </div>
+
+    <!-- Success Overlay -->
+    <div class="success-overlay" id="success-msg">
+        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h2>注文が完了しました！</h2>
+        <p>ウェルネスな体験への第一歩をありがとうございます。<br>詳細はご登録のメールアドレスにお送りします。</p>
+        <button class="btn" style="margin-top: 2rem; width: 100%;" onclick="closeSuccessOverlay()">閉じる</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2024 Kikuchan Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
