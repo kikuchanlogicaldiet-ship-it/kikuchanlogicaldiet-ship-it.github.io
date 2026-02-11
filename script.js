@@ -161,6 +161,17 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartUI();
     renderProducts();
 
+    // Background Slideshow
+    const heroSlides = document.querySelectorAll('.hero-bg');
+    if (heroSlides.length > 1) {
+        let currentSlide = 0;
+        setInterval(() => {
+            heroSlides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % heroSlides.length;
+            heroSlides[currentSlide].classList.add('active');
+        }, 5000); // Change every 5 seconds
+    }
+
     // Smooth scrolling for internal anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
