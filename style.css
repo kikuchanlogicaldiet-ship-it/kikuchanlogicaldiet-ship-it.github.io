@@ -141,10 +141,14 @@ nav {
   height: 100vh;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-end;
+  /* Align to bottom */
+  justify-content: flex-start;
+  /* Align to left */
+  text-align: left;
   overflow: hidden;
+  padding: var(--spacing-lg);
+  /* Add padding for breathing room */
 }
 
 .hero-slideshow {
@@ -165,7 +169,8 @@ nav {
   object-fit: cover;
   opacity: 0;
   transition: opacity 2s ease-in-out;
-  filter: brightness(0.9);
+  filter: brightness(0.7);
+  /* Slightly darker for better text readability */
 }
 
 .hero-bg.active {
@@ -173,25 +178,37 @@ nav {
 }
 
 .hero-content {
-  background: rgba(255, 255, 255, 0.85);
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  backdrop-filter: blur(5px);
-  box-shadow: var(--shadow-lg);
-  max-width: 800px;
-  animation: fadeIn 1s ease-out;
+  background: transparent;
+  /* Remove white background */
+  padding: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  box-shadow: none;
+  max-width: 900px;
+  margin-bottom: var(--spacing-lg);
+  /* Space from bottom */
+  margin-left: var(--spacing-sm);
+  /* Consistent spacing from left side */
+  animation: fadeIn 1.2s ease-out;
+  color: white;
+  /* Contrast with dark background */
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+  /* Larger, more impactful */
   margin-bottom: var(--spacing-sm);
-  color: var(--color-text-primary);
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* Subtle shadow for readability */
+  line-height: 1.1;
 }
 
 .hero p {
-  font-size: 1.125rem;
-  color: var(--color-text-secondary);
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: var(--spacing-md);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
@@ -203,6 +220,8 @@ nav {
   font-weight: 600;
   font-family: var(--font-main);
   box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.39);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Subtle border for definition */
 }
 
 .btn:hover {
