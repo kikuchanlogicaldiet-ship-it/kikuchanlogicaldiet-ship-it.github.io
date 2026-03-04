@@ -194,6 +194,13 @@ nav {
   /* Contrast with dark background */
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
 .hero h1 {
   font-size: 4rem;
   /* Larger, more impactful */
@@ -356,6 +363,19 @@ footer {
 
   .nav-links {
     display: none;
+  }
+
+  .hero {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .hero-buttons {
+    gap: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
   }
 }
 
